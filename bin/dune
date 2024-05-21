@@ -1,0 +1,4 @@
+(executable
+ (public_name EcologySim)
+ (name main)
+ (libraries EcologySim))
