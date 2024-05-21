@@ -1,1 +1,1 @@
-# ecology-sim
+# EcologySim
