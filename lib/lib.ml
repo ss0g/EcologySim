@@ -6,5 +6,4 @@ module Creature = Creature
 module Creature_traits = Creature_traits
 module Plant = Plant
 module Game = Game
-module Game_map = Game_map
 
