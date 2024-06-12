@@ -1,4 +1,3 @@
-module Entity = Entity
 module Timer = Timer
 module Edible = Edible
 module Energy = Energy
