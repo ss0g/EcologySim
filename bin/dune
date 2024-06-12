@@ -1,4 +1,11 @@
 (executable
  (public_name EcologySim)
  (name main)
+ (modules main)
+ (libraries EcologySim))
+
+(executable
+ (public_name generate_gfx)
+ (name generate_gfx)
+ (modules generate_gfx)
  (libraries EcologySim))
