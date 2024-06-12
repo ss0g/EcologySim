@@ -1,10 +1,8 @@
 open Energy
-open Entity
 open Edible
 
 class virtual plant = (* TODO: create bush and tree subclasses *)
     object (self)
-        inherit entity
         inherit edible
 
         val virtual cooldown : int

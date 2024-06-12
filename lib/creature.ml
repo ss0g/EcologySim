@@ -1,13 +1,11 @@
-open Entity
 open Edible
 
-module Creature_traits = Creature_traits
+module Traits = Creature_traits
 
 open Creature_traits
 
 class creature traits =
     object
-        inherit entity
         inherit edible
 
         val traits : creature_traits = traits
