@@ -73,12 +73,15 @@ let draw_map_threaded () =
         set_color blue;
         fill_rect 0 0 w h;
         set_color green;
-        for x = -10 to 10 do
-            (fun _ -> ()) (Thread.create (fun i ->
+        let rd = Domain.recommended_domain_count () in
+        let halfrd = rd / 2 + 1 and
+        cpd = 2000 / rd in
+        for x = -halfrd to halfrd - 1 do
+            (fun _ -> ()) (Domain.spawn (fun _ ->
                 for j = 0 to 99 do
-                    draw_col @@ float_of_int (i * 100 + j)
+                    draw_col @@ float_of_int (x * cpd + j)
                 done
-            ) x)
+            ))
         done;
         for x = -1000 to 999 do
             (fun _ -> ()) (Thread.create draw_col @@ float_of_int x)
