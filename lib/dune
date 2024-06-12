@@ -1,2 +1,8 @@
+(include_subdirs unqualified)
+
 (library
- (name EcologySim))
+ (name lib)
+ (public_name EcologySim)
+ (modules entity plant edible timer creature energy plant creature_traits)
+ (modules_without_implementation energy creature_traits))
+
