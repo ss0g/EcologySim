@@ -83,8 +83,5 @@ let draw_map_threaded () =
                 done
             ))
         done;
-        for x = -1000 to 999 do
-            (fun _ -> ()) (Thread.create draw_col @@ float_of_int x)
-        done
     end
 
